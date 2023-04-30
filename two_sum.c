@@ -4,6 +4,7 @@
 
 #include <stdio.h> // printf("%d", 0);
 #include <stdlib.h> // malloc
+#include <assert.h>
 
 #define FALSE 0
 #define TRUE 1
@@ -16,13 +17,28 @@ int main()
 {
    int values[] = {0, 4, 6, 7, 2, 11};
    
-   int returnSize_a;
-   int* answer_a = twoSum(values, ARRAY_SIZE(values), 17, &returnSize_a);
-   printf("answer_a: %d %d\n", answer_a[0], answer_a[1]);
+   int return_size_a;
+   int* answer_a = twoSum(values, ARRAY_SIZE(values), 17, &return_size_a);
+   assert (return_size_a == 2);
+   assert
+      ((answer_a[0] == 2 && answer_a[1] == 5) ||
+      (answer_a[0] == 5 && answer_a[1] == 2));
+   printf("test_a passed\n");
    
-   int returnSize_b;
-   int* answer_b = twoSum(values, ARRAY_SIZE(values), 6, &returnSize_b);
-   printf("answer_b: %d %d\n", answer_b[0], answer_b[1]);
+   int return_size_b;
+   int* answer_b = twoSum(values, ARRAY_SIZE(values), 6, &return_size_b);
+   assert (return_size_b == 2);
+   assert
+      ((answer_b[0] == 0 && answer_b[1] == 2) ||
+      (answer_b[0] == 2 && answer_b[1] == 0) ||
+      (answer_b[0] == 1 && answer_b[1] == 4) ||
+      (answer_b[0] == 4 && answer_b[1] == 1));
+   printf("test_b passed\n");
+
+   /**
+   * Further tests needed: 
+   * Sum not found; Empty array; Overflow; Negative values
+   */
    
    return 0;
 }
