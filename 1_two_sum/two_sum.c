@@ -6,8 +6,6 @@
 #include <stdlib.h> // malloc
 #include <assert.h>
 
-#define FALSE 0
-#define TRUE 1
 #define ARRAY_SIZE(arr) (sizeof(arr) / sizeof(arr[0]))
 
 /* Function prototype */
@@ -67,6 +65,7 @@ int* twoSum(int* nums, int numsSize, int target, int* returnSize)
          if (target == nums[i] + nums[j])
          {
             *returnSize = 2;
+
             int* ans = malloc(2 * sizeof(int));
             ans[0] = i;
             ans[1] = j; /* equivalent to: ans[0] = i, ans[1] = j; */
