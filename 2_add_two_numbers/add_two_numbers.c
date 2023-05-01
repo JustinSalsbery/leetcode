@@ -13,6 +13,9 @@ int main()
     /**
     * Compound literals are for local scope only. Malloc must be used
     * if the structure lives past said scope, such as in addTwoNumbers.
+    *
+    * (Malloc places on the heap while compound literals are placed on the
+    * stack. This does mean compound literals are more performant.)
     */
    struct ListNode* l1 = &(struct ListNode) {1, NULL};
    /* Val member accessed by: l1->val or (*l1).val NOT *l1.val */
