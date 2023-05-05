@@ -61,6 +61,22 @@ struct ListNode* addTwoNumbers(struct ListNode* l1, struct ListNode* l2)
    struct ListNode* list_sum_head = NULL; 
    /* Initialize with NULL else it may contain garbage values. */
    struct ListNode** list_sum_current = &list_sum_head;
+   int carry = 0, sum = 0;
+
+   while(l1 || l2 || carry)
+   {
+      sum = carry + (l1 ? l1->val : 0) + (l2 ? l2->val : 0);
+      // Null check before value access.
+      carry = sum / 10;
+
+      *list_sum_current = malloc(sizeof(struct ListNode));
+      (*list_sum_current)->val = sum % 10;
+      (*list_sum_current)->next = NULL;
+      
+      list_sum_current = &(*list_sum_current)->next;
+      l1 = l1 ? l1->next : NULL, l2 = l2 ? l2->next : NULL;
+      // Shift to next node only if the current node is valid.
+   }
 
    return list_sum_head;
 }
