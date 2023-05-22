@@ -4,5 +4,5 @@
 # ex: export CURRENT_PROGRAM=2_add_two_numbers/add_two_numbers.c
 
 echo "RUNNING: $CURRENT_PROGRAM"
-gcc $CURRENT_PROGRAM && ./a.out
+gcc -O0 $CURRENT_PROGRAM && ./a.out
 rm -f a.out

@@ -11,7 +11,7 @@
 /* Function prototype */
 int* twoSum(int* nums, int numsSize, int target, int* returnSize);
 
-int main()
+int main(void)
 {
    int values[] = {0, 4, 6, 7, 2, 11};
    

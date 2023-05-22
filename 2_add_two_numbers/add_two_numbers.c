@@ -8,7 +8,7 @@
 
 #include "add_two_numbers.h"
 
-int main()
+int main(void)
 {
     /**
     * Compound literals are for local scope only. Malloc must be used

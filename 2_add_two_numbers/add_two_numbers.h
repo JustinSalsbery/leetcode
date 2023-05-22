@@ -3,9 +3,8 @@
 */
 
 /* Define only if not already defined. Avoids duplicates. */
-
-#ifndef ADD_TWO_NUMBERS
-#define ADD_TWO_NUMBERS
+#ifndef ADD_TWO_NUMBERS_H
+#define ADD_TWO_NUMBERS_H
 
 /**
 * Standard is to define structs and declare, but not define, functions 
