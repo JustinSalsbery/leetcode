@@ -20,9 +20,9 @@ int main(void)
    */
 
    if (0 != lengthOfLongestSubstring(NULL))
-      printf("Test FAILED: 0 != lengthOfLongestSubstring(NULL)\n");
+      printf("Test FAILED in %s on line %d\n", __FILE__, __LINE__);
    if (3 != lengthOfLongestSubstring("pwwkew"))
-      printf("Test FAILED: 3 != lengthOfLongestSubstring(\"pwwkew\")\n");
+      printf("Test FAILED in %s on line %d\n", __FILE__, __LINE__);
    return 0;
 }
 

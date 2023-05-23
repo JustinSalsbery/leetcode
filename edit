@@ -1,7 +1,0 @@
-#! /bin/bash
-
-# To use, set the CURRENT_PROGRAM environment variable.
-# ex: export CURRENT_PROGRAM=2_add_two_numbers/add_two_numbers.c
-
-echo "EDITING: $CURRENT_PROGRAM"
-vim $CURRENT_PROGRAM
